@@ -1,0 +1,28 @@
+a {
+ text-decoration:none;
+ transition: all 300ms ease-in-out;
+ }
+
+a:hover,a:active {
+ text-decoration: none;
+ }
+
+h1,h2,h4 {
+ font-family: 'PT Sans Narrow', Arial, sans-serif;
+ text-decoration:uppercase;
+ font-weight:700;
+ }
+
+p {
+ font-size:15px;
+ line-height:21px;
+ }
+
+ .ht, .cs{
+ 	height: 30%;
+ }
+
+ iframe{
+ 	width: 100%;
+ 	height:400px;
+ }
