@@ -1,14 +1,18 @@
-var html_editor = document.querySelector('#html'),
-    css_editor = document.querySelector('#css'),
-    js_editor = document.querySelector('#js');
+var html_editor = CodeMirror.fromTextArea(document.getElementById("html"), {
+          lineNumbers: true,
+          mode: "xml",
+          htmlMode:true
+    }),
+    css_editor = CodeMirror.fromTextArea(document.getElementById("css"), {
+          lineNumbers: true,
+          mode: "css"
+    }),
+    js_editor = CodeMirror.fromTextArea(document.getElementById("js"), {
+          lineNumbers: true,
+          mode: "javascript"
+    });
  
 var editors = [html_editor, css_editor, js_editor];
- 
-editors.forEach(function(editor, i, arr) {
-    editor.addEventListener('keyup', function() {
-        render();
-    });
-});
 
 var base_tpl =
     "<!doctype html>\n" +
@@ -22,20 +26,21 @@ var base_tpl =
     "</html>";
  
 var prepareSource = function() {
-    var html = html_editor.value,
-        css = css_editor.value,
-        js=js_editor.value,
+    var html = html_editor.getValue(),
+        css = css_editor.getValue(),
+        jsdata=js_editor.getValue(),
         src = '';
     // HTML
     src = base_tpl.replace('</body>', html + '</body>');
     // CSS
     css = '<style>' + css + '</style>';
     src = src.replace('</head>', css + '</head>');
-    js = js.replace('</body>', js + '</body>');
+    jsdata="<script>"+jsdata+"</script>";
+    src = src.replace('</body>', jsdata + '</body>');
     return src;
 };
 
-var render = function() {
+function render() {
     var source = prepareSource();
     var iframe = document.querySelector('iframe');
     var iframe_doc = iframe.contentDocument;
@@ -44,3 +49,10 @@ var render = function() {
     iframe_doc.write(source);
     iframe_doc.close();
 };
+
+
+ html_editor.on("change",render);
+ js_editor.on("change",render);
+ css_editor.on("change",render);
+
+
