@@ -1,11 +1,11 @@
 var html_editor = CodeMirror.fromTextArea(document.getElementById("html"), {
           lineNumbers: true,
-          mode: "xml",
+          mode: "text/html",
           htmlMode:true,
           theme:"3024-night",
           matchBrackets:true,
           autoCloseTags: true,
-          extraKeys:{'Ctrl-Space':'autocomplete'},
+          extraKeys:{"Ctrl-Space": "autocomplete"},
           lint:true,
           gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter", "CodeMirror-lint-markers"]
     }),
@@ -15,7 +15,7 @@ var html_editor = CodeMirror.fromTextArea(document.getElementById("html"), {
           theme:"3024-night",
           matchBrackets:true,
           autoCloseBrackets: true,
-          extraKeys:{'Ctrl-Space':'autocomplete'},
+          extraKeys:{"Ctrl-Space": "autocomplete"},
           lint:true,
           gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter", "CodeMirror-lint-markers"]
         }),
@@ -25,7 +25,7 @@ var html_editor = CodeMirror.fromTextArea(document.getElementById("html"), {
           theme:"3024-night",
           matchBrackets:true,
           autoCloseBrackets: true,
-          extraKeys:{"Ctrl-Space":"autocomplete"},
+          extraKeys:{"Ctrl-Space": "autocomplete"},
           lint:true,
           gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter", "CodeMirror-lint-markers"]
     });
