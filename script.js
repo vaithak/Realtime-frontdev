@@ -36,6 +36,9 @@ var base_tpl =
     "<!doctype html>\n" +
     "<html>\n\t" +
     "<head>\n\t\t" +
+    "<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">"+
+    "<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js\"></script>"+
+    "<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n\t"+
     "<meta charset=\"utf-8\">\n\t\t" +
     "<title>Test</title>\n\n\t\t\n\t" +
     "</head>\n\t" +
@@ -53,6 +56,7 @@ var prepareSource = function() {
     // CSS
     css = '<style>' + css + '</style>';
     src = src.replace('</head>', css + '</head>');
+    //JS
     jsdata="<script>"+jsdata+"</script>";
     src = src.replace('</body>', jsdata + '</body>');
     return src;
