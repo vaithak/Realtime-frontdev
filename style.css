@@ -3,6 +3,10 @@ a {
  transition: all 300ms ease-in-out;
  }
 
+body{
+	background-color: #ccc;
+}
+
 a:hover,a:active {
  text-decoration: none;
  }
@@ -25,4 +29,5 @@ p {
  iframe{
  	width: 100%;
  	height:400px;
+ 	background-color: white;
  }

@@ -7,21 +7,24 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="codemirror-5.33.0/lib/codemirror.css">
+    <link rel="stylesheet" type="text/css" href="codemirror-5.33.0/theme/3024-night.css">
+    <link rel="stylesheet" href="codemirror-5.33.0/addon/hint/show-hint.css">
+    <link rel="stylesheet" type="text/css" href="codemirror-5.33.0/addon/lint/lint.css">
 </head>
 <body>
 	<div class="container" style="width: 100vw; height: 100vh">
 		<div class="row">
 			<div class="col-lg-4 col-md-4 ht">
 				<h1>HTML</h1>
-				<textarea name="htmlinp" cols="60%" rows="12" id="html">hi</textarea>
+				<textarea name="htmlinp" cols="60%" rows="12" id="html"></textarea>
 			</div>
 			<div class="col-lg-4 col-md-4 cs">
 				<h1>CSS</h1>
-				<textarea name="cssinp" cols="60%" rows="12" id="css">hi</textarea>
+				<textarea name="cssinp" cols="60%" rows="12" id="css"></textarea>
 			</div>
 			<div class="col-lg-4 col-md-4 jsd">
 				<h1>JS</h1>
-				<textarea name="cssinp" cols="60%" rows="12" id="js">var a=5;</textarea>
+				<textarea name="cssinp" cols="60%" rows="12" id="js"></textarea>
 			</div>
 		</div>
 		<div class="row">
@@ -34,6 +37,19 @@
     <script src="codemirror-5.33.0/mode/xml/xml.js"></script>
     <script src="codemirror-5.33.0/mode/css/css.js"></script>
     <script src="codemirror-5.33.0/mode/javascript/javascript.js"></script>
+    <script src="codemirror-5.33.0/addon/hint/show-hint.js"></script>
+    <script type="text/javascript" src="codemirror-5.33.0/addon/edit/matchbrackets.js"></script>
+    <script type="text/javascript" src="codemirror-5.33.0/addon/edit/matchtags.js"></script>
+    <script type="text/javascript" src="codemirror-5.33.0/addon/edit/closetag.js"></script>
+    <script type="text/javascript" src="codemirror-5.33.0/addon/edit/closebrackets.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jshint/r07/jshint.js"></script>
+    <script type="text/javascript" src="codemirror-5.33.0/addon/lint/lint.js"></script>
+    <script type="text/javascript" src="codemirror-5.33.0/addon/hint/javascript-hint.js"></script>
+    <script type="text/javascript" src="codemirror-5.33.0/addon/hint/html-hint.js"></script>
+    <script type="text/javascript" src="codemirror-5.33.0/addon/hint/css-hint.js"></script>
+    <script type="text/javascript" src="codemirror-5.33.0/addon/lint/html-lint.js"></script>
+    <script type="text/javascript" src="codemirror-5.33.0/addon/lint/css-lint.js"></script>
+    <script type="text/javascript" src="codemirror-5.33.0/addon/lint/javascript-lint.js"></script>
 	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>

@@ -1,15 +1,33 @@
 var html_editor = CodeMirror.fromTextArea(document.getElementById("html"), {
           lineNumbers: true,
           mode: "xml",
-          htmlMode:true
+          htmlMode:true,
+          theme:"3024-night",
+          matchBrackets:true,
+          autoCloseTags: true,
+          extraKeys:{'Ctrl-Space':'autocomplete'},
+          lint:true,
+          gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter", "CodeMirror-lint-markers"]
     }),
     css_editor = CodeMirror.fromTextArea(document.getElementById("css"), {
           lineNumbers: true,
-          mode: "css"
-    }),
+          mode: "css",
+          theme:"3024-night",
+          matchBrackets:true,
+          autoCloseBrackets: true,
+          extraKeys:{'Ctrl-Space':'autocomplete'},
+          lint:true,
+          gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter", "CodeMirror-lint-markers"]
+        }),
     js_editor = CodeMirror.fromTextArea(document.getElementById("js"), {
           lineNumbers: true,
-          mode: "javascript"
+          mode: "javascript",
+          theme:"3024-night",
+          matchBrackets:true,
+          autoCloseBrackets: true,
+          extraKeys:{"Ctrl-Space":"autocomplete"},
+          lint:true,
+          gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter", "CodeMirror-lint-markers"]
     });
  
 var editors = [html_editor, css_editor, js_editor];
